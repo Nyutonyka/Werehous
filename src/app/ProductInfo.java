@@ -8,6 +8,7 @@ public class ProductInfo {
     static int quantity;
     static Product product;
     static double totalWeight;
+    static String totalWeightRounded;
     static private final String MEASURE = "кг";
 
     public static void main(String[] args) {
@@ -30,9 +31,14 @@ public class ProductInfo {
         product = new Product(name, weight);
         name = product.getName();
         totalWeight = getTotalWeight(product.getWeight(), quantity);
+        totalWeightRounded = getTotalWeightRounded(totalWeight);
     }
 
     static private double getTotalWeight(double weight, int quantity) {
         return weight * quantity;
+    }
+
+    static private String getTotalWeightRounded(double totalWeight) {
+        return Rounder.roundWeight(totalWeight);
     }
 }
