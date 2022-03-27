@@ -1,5 +1,10 @@
 package app;
 
+/**
+ * @author Babich Anna
+ * @version 1.0.0
+ */
+
 import java.util.Scanner;
 
 public class ProductInfo {
