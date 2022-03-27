@@ -7,6 +7,7 @@ public class ProductInfo {
     static double weight;
     static int quantity;
     static Product product;
+    static double totalWeight;
     static private final String MEASURE = "кг";
 
     public static void main(String[] args) {
@@ -28,5 +29,10 @@ public class ProductInfo {
     static private void handleData() {
         product = new Product(name, weight);
         name = product.getName();
+        totalWeight = getTotalWeight(product.getWeight(), quantity);
+    }
+
+    static private double getTotalWeight(double weight, int quantity) {
+        return weight * quantity;
     }
 }
