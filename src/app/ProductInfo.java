@@ -13,7 +13,7 @@ public class ProductInfo {
 
     public static void main(String[] args) {
         doInputs();
-        handleData();
+        showInfo(handleData());
     }
 
     static private void doInputs() {
@@ -43,5 +43,9 @@ public class ProductInfo {
 
     static private String getTotalWeightRounded(double totalWeight) {
         return Rounder.roundWeight(totalWeight);
+    }
+
+    static private void showInfo(String output) {
+        System.out.println(output);
     }
 }
