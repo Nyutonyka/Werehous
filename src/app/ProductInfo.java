@@ -27,11 +27,14 @@ public class ProductInfo {
         scanner.close();
     }
 
-    static private void handleData() {
+    static private String handleData() {
         product = new Product(name, weight);
         name = product.getName();
         totalWeight = getTotalWeight(product.getWeight(), quantity);
         totalWeightRounded = getTotalWeightRounded(totalWeight);
+        return "------------------------\n" +
+                "Общий вес товара " + name + " (" + MEASURE + "): "
+                + totalWeightRounded;
     }
 
     static private double getTotalWeight(double weight, int quantity) {
